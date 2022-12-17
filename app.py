@@ -2,8 +2,8 @@ from PIL import Image
 from os.path import join, dirname, realpath
 from glob import glob
 import tensorflow as tf
-import keras.utils as image
-from keras.applications.inception_v3 import preprocess_input, decode_predictions
+import tensorflow.keras.utils as image
+from tensorflow.keras.applications.inception_v3 import preprocess_input, decode_predictions
 
 import streamlit as st
 import numpy as np
