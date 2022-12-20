@@ -30,7 +30,6 @@ st.write("1. Kindly change the name of the video to sample1 before you upload ")
 st.write("2. Put in the word you would love to search in the search query box")
 st.write("3. Wait for the video to process and send you another video of the searched word")
 
-# User search query
 
 
 # Allow user to upload video
@@ -55,7 +54,10 @@ if(video is not None):
     video_file = open(file_details['filename'], 'rb')
     video_bytes = video_file.read()
     st.video(video_bytes)
-	
+
+
+	# User search query
+
     search_query = st.text_input("enter object to query","" )
 
 	
