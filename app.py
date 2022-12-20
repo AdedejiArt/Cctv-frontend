@@ -31,8 +31,7 @@ st.write("2. Put in the word you would love to search in the search query box")
 st.write("3. Wait for the video to process and send you another video of the searched word")
 
 # User search query
-search_query = st.text_input("enter object to query","" )
-print(search_query)
+
 
 # Allow user to upload video
 video = st.file_uploader(label="upload video", type="mp4", key="video_upload_file")
@@ -56,6 +55,11 @@ if(video is not None):
     video_file = open(file_details['filename'], 'rb')
     video_bytes = video_file.read()
     st.video(video_bytes)
+	
+    search_query = st.text_input("enter object to query","" )
+
+	
+    
 
     # Create frames for the video and save 
     def create_frames():
